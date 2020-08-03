@@ -61,15 +61,7 @@ app.get(REDIRECTID,function(req, res){
     });
 });
 
-app.post(REDIRECT_USER_VIEWS,function(req, res){
-    //var con= new conexion();
-    let json=catalogojson; 
-    con.update("INSERT INTO usuarios(usuario, referencia, password) VALUES(?, ?, ?)",[req.body.usuario,req.body.referencia,req.body.password]).then((resp)=>{
-        res.render('admin',{vista:"usuarios.ejs"});
-     }).catch((err)=>{
-      console.log(err);
-     });
-});
+
 
 app.put(REDIRECTID,function(req, res){
     console.log("inicio metodo put")
