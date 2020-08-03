@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div>
+            <table class="egt">    
+            <tr>
+                  <th>titulo</th>
+                  <th>precio</th>
+                  <th>clasificacion</th>
+                  <th>genero</th>
+                  <th>status</th>
+                  <th>fechaDsiponible</th>
+                  <th>imagen</th>
+            </tr>
+            <% json.forEach((j , index)=>{%>
+            <tr> 
+                  <td><%=j.titulo%></td>      
+                  <td><%=j.precio%></td>
+                  <td><%=j.clasificacion%></td>
+                  <td><%=j.genero%></td>
+                  <td><%=j.status%></td>
+                  <td><%=j.fechaDsiponible%></td>
+                  <td><%=j.imagen%></td>
+            </tr>     
+                  <%});%>   
+            </table>       
+</body>
+</html>
